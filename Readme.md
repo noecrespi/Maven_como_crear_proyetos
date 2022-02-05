@@ -12,8 +12,9 @@ Maven es una herramienta open-source, que se creó en 2001 con el objetivo de si
 Hay dos tipos de crear un proyecto maven, uno a través de del programa que vamos a utilizar y otro a través de la terminal. En mi caso explicaré como se hace a través de la terminal. 
 
 
-1. Abrir la terminal 
-2.A través de los comandos seleccionaremos donde queremos crear el proyecto.
+1. Abrir la terminal.
+
+2. A través de los comandos seleccionaremos donde queremos crear el proyecto.
 
 - `ls` lee los archivos que están en la carpeta 
 - `cd nombreCarpeta` entra en la carpeta que has seleccionado 
@@ -161,7 +162,7 @@ CarpetaProyecto
 Ej:
 
 ```
-<mainClass>edu.elsmancs.App.java</mainClass> 
+<mainClass>edu.elsmancs.App</mainClass> 
 ```
 
 # Bibliografía
