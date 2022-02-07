@@ -11,10 +11,19 @@ Maven es una herramienta open-source, que se creó en 2001 con el objetivo de si
 ## ¿Cómo crear un proyecto maven?
 Hay dos tipos de crear un proyecto maven, uno a través de del programa que vamos a utilizar y otro a través de la terminal. En mi caso explicaré como se hace a través de la terminal. 
 
+1. Entrar en el github.
 
-1. Abrir la terminal.
+3. Hacer **clic** en el **+** de la esquina superior derecha, junto a su avatar o icono de identificación
 
-2. A través de los comandos seleccionaremos donde queremos crear el proyecto.
+2. **Seleccionar New repository** .
+
+4. **Crear** un **repositorio vacio**. Poner un nombre, descripción al repositorio y poner el repositorio que sea publico. 
+
+5. Clicar **Create repository**
+
+6. Abrir la terminal.
+
+ _A través de los comandos seleccionaremos donde queremos crear el proyecto._
 
 - `ls` lee los archivos que están en la carpeta 
 - `cd nombreCarpeta` entra en la carpeta que has seleccionado 
@@ -22,7 +31,15 @@ Hay dos tipos de crear un proyecto maven, uno a través de del programa que vamo
 - `mkdir nombreCarpetaNueva`  crea una carpeta del nombre que le has dado 
 - `clear` limpiar la pantalla 
 
-3. Copiar la siguiente instrucción, hay que tener en cuenta que ha que modificar cosas para poderlo dejar como más te convenga. 
+7. **Crear** una **nueva carpeta**.
+
+    ```mkdir nombreDeCarpeta```
+
+8.  Entrar en la carpeta que hemos creado. 
+
+    ```cd nombreDeCarpeta```
+
+9. Copiar la siguiente instrucción, hay que tener en cuenta que ha que modificar cosas para poderlo dejar como más te convenga. 
 
 ```
 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
@@ -116,7 +133,7 @@ CarpetaProyecto
     | pom.xml
 `
 
-4. Abrir el archivo `pom.xml`  hay que comprobar:
+10. Abrir el archivo `pom.xml`  hay que comprobar:
 - Tiene que poner el nombre de la empresa.
 ```
 <groupId>nombreEmpresa</groupId>
@@ -141,8 +158,12 @@ CarpetaProyecto
 </properties>
 ```
 
-5. En el mismo documento ( _pom.xml_ ) hay que añadir una sección de configuración pata generar la aplicación. 
+11. En el mismo documento ( _pom.xml_ ) hay que añadir una sección de configuración pata generar la aplicación. 
 
+Esa parte va después de 
+`<plugin>
+ 	<artifactId>maven-jar-plugin</artifactId>
+ 	<version>3.0.2</version>`
 ```
 <!-- Seccion configuration para generar un jar ejecutable de la app -->
           <configuration>
@@ -157,7 +178,7 @@ CarpetaProyecto
             </archive>
           </configuration>
 ```
-6. Cambiar `<mainClass>… </mainClass>`, la cual tendremos que poner la ruta del archivo donde esta el archivo _App.java_ . 
+12. Cambiar `<mainClass>… </mainClass>`, la cual tendremos que poner la ruta del archivo donde esta el archivo _App.java_ . 
 
 Ej:
 
